@@ -115,7 +115,7 @@ const ProductCatalog: React.FC = () => {
 
         <div className="flex items-center justify-between mb-3">
           <div>
-            <span className="text-lg font-bold text-orange-600">
+            <span className="text-lg font-bold text-blue-600">
               R$ {product.price.toFixed(2).replace('.', ',')}
             </span>
             {product.originalPrice && (
@@ -127,7 +127,7 @@ const ProductCatalog: React.FC = () => {
         </div>
 
         <button 
-          className={`w-full bg-orange-600 text-white py-2 rounded-lg hover:bg-orange-700 transition-colors flex items-center justify-center space-x-2 ${
+          className={`w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center space-x-2 ${
             !product.inStock ? 'opacity-50 cursor-not-allowed' : ''
           }`}
           disabled={!product.inStock}
@@ -156,7 +156,7 @@ const ProductCatalog: React.FC = () => {
                 placeholder="Buscar produtos... (ex: cimento, tinta látex branca)"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
             </div>
 
@@ -173,7 +173,7 @@ const ProductCatalog: React.FC = () => {
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-                className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500"
+                className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
               >
                 <option value="name">Nome A-Z</option>
                 <option value="price-low">Menor Preço</option>
@@ -184,13 +184,13 @@ const ProductCatalog: React.FC = () => {
               <div className="flex border border-gray-300 rounded-lg overflow-hidden">
                 <button
                   onClick={() => setViewMode('grid')}
-                  className={`p-2 ${viewMode === 'grid' ? 'bg-orange-600 text-white' : 'bg-white text-gray-600'}`}
+                  className={`p-2 ${viewMode === 'grid' ? 'bg-blue-600 text-white' : 'bg-white text-gray-600'}`}
                 >
                   <Grid size={16} />
                 </button>
                 <button
                   onClick={() => setViewMode('list')}
-                  className={`p-2 ${viewMode === 'list' ? 'bg-orange-600 text-white' : 'bg-white text-gray-600'}`}
+                  className={`p-2 ${viewMode === 'list' ? 'bg-blue-600 text-white' : 'bg-white text-gray-600'}`}
                 >
                   <List size={16} />
                 </button>
@@ -209,7 +209,7 @@ const ProductCatalog: React.FC = () => {
                 <h3 className="text-lg font-semibold">Filtros</h3>
                 <button
                   onClick={clearFilters}
-                  className="text-sm text-orange-600 hover:text-orange-700"
+                  className="text-sm text-blue-600 hover:text-blue-700"
                 >
                   Limpar Tudo
                 </button>
@@ -221,7 +221,7 @@ const ProductCatalog: React.FC = () => {
                 <select
                   value={filters.category}
                   onChange={(e) => handleFilterChange('category', e.target.value)}
-                  className="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500"
+                  className="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
                 >
                   {categories.map(category => (
                     <option key={category} value={category}>{category}</option>
@@ -235,7 +235,7 @@ const ProductCatalog: React.FC = () => {
                 <select
                   value={filters.brand}
                   onChange={(e) => handleFilterChange('brand', e.target.value)}
-                  className="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500"
+                  className="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
                 >
                   {brands.map(brand => (
                     <option key={brand} value={brand}>{brand}</option>
@@ -270,7 +270,7 @@ const ProductCatalog: React.FC = () => {
                       onClick={() => handleFilterChange('minRating', rating)}
                       className={`px-3 py-1 rounded-full text-sm ${
                         filters.minRating === rating
-                          ? 'bg-orange-600 text-white'
+                          ? 'bg-blue-600 text-white'
                           : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
                       }`}
                     >
@@ -308,7 +308,7 @@ const ProductCatalog: React.FC = () => {
                 <p className="text-gray-500 text-lg mb-4">Nenhum produto encontrado</p>
                 <button
                   onClick={clearFilters}
-                  className="text-orange-600 hover:text-orange-700 font-medium"
+                  className="text-blue-600 hover:text-blue-700 font-medium"
                 >
                   Limpar filtros e tentar novamente
                 </button>

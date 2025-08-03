@@ -42,12 +42,12 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1e3a8a; /* azul escuro */
+  background: #1e40af; /* azul escuro */
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #2563eb; /* azul mais claro no hover */
+  background: #3b82f6; /* azul mais claro no hover */
 }
 
 /* Prevent body scroll when sidebar is open */
