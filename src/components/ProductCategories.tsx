@@ -71,7 +71,7 @@ const ProductCategories: React.FC = () => {
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-orange-600 transition-colors">
+                <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">
                   {category.name}
                 </h3>
                 <p className="text-gray-600">{category.description}</p>

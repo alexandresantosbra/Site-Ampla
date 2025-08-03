@@ -61,7 +61,7 @@ const FeaturedProducts: React.FC = () => {
             >
               <div className="relative">
                 {product.badge && (
-                  <span className="absolute top-2 left-2 bg-orange-600 text-white px-2 py-1 text-xs font-semibold rounded z-10">
+                  <span className="absolute top-2 left-2 bg-blue-600 text-white px-2 py-1 text-xs font-semibold rounded z-10">
                     {product.badge}
                   </span>
                 )}
@@ -92,7 +92,7 @@ const FeaturedProducts: React.FC = () => {
 
                 <div className="flex items-center justify-between mb-3">
                   <div>
-                    <span className="text-lg font-bold text-orange-600">{product.price}</span>
+                    <span className="text-lg font-bold text-blue-600">{product.price}</span>
                     {product.originalPrice && (
                       <span className="text-sm text-gray-500 line-through ml-2">
                         {product.originalPrice}
@@ -101,7 +101,7 @@ const FeaturedProducts: React.FC = () => {
                   </div>
                 </div>
 
-                <button className="w-full bg-orange-600 text-white py-2 rounded-lg hover:bg-orange-700 transition-colors flex items-center justify-center space-x-2">
+                <button className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center space-x-2">
                   <ShoppingCart size={16} />
                   <span>Adicionar</span>
                 </button>

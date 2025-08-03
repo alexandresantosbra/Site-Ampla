@@ -71,7 +71,7 @@ const ImageCarousel: React.FC = () => {
           <button
             key={index}
             className={`w-3 h-3 rounded-full transition-colors ${
-              index === currentIndex ? 'bg-orange-600' : 'bg-white bg-opacity-50'
+              index === currentIndex ? 'bg-blue-600' : 'bg-white bg-opacity-50'
             }`}
             onClick={() => setCurrentIndex(index)}
           />

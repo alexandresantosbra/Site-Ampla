@@ -55,28 +55,28 @@ const Header: React.FC = () => {
             <a href="#home" className="text-gray-700 hover:text-orange-600 font-medium transition-colors">
               Início
             </a>
-            <a href="#catalogo" className="text-gray-700 hover:text-orange-600 font-medium transition-colors">
+            <a href="#catalogo" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
               Catálogo
             </a>
-            <a href="#produtos" className="text-gray-700 hover:text-orange-600 font-medium transition-colors">
+            <a href="#produtos" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
               Produtos
             </a>
-            <a href="#categorias" className="text-gray-700 hover:text-orange-600 font-medium transition-colors">
+            <a href="#categorias" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
               Categorias
             </a>
-            <a href="#sobre" className="text-gray-700 hover:text-orange-600 font-medium transition-colors">
+            <a href="#sobre" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
               Sobre
             </a>
-            <a href="#contato" className="text-gray-700 hover:text-orange-600 font-medium transition-colors">
+            <a href="#contato" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
               Contato
             </a>
           </nav>
 
           {/* Cart */}
           <div className="flex items-center space-x-4">
-            <button className="relative p-2 text-gray-700 hover:text-orange-600 transition-colors">
+            <button className="relative p-2 text-gray-700 hover:text-blue-600 transition-colors">
               <ShoppingCart size={24} />
-              <span className="absolute -top-1 -right-1 bg-orange-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+              <span className="absolute -top-1 -right-1 bg-blue-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
                 3
               </span>
             </button>

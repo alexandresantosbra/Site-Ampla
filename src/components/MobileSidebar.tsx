@@ -76,7 +76,7 @@ const MobileSidebar: React.FC<MobileSidebarProps> = ({ isOpen, onClose }) => {
               key={index}
               href={item.href}
               onClick={handleLinkClick}
-              className="flex items-center space-x-3 px-6 py-4 text-gray-700 hover:bg-orange-50 hover:text-orange-600 hover:border-r-4 hover:border-orange-600 transition-all duration-200"
+              className="flex items-center space-x-3 px-6 py-4 text-gray-700 hover:bg-blue-50 hover:text-blue-600 hover:border-r-4 hover:border-blue-600 transition-all duration-200"
             >
               <span className="text-gray-500">{item.icon}</span>
               <span className="font-medium">{item.label}</span>
@@ -86,7 +86,7 @@ const MobileSidebar: React.FC<MobileSidebarProps> = ({ isOpen, onClose }) => {
 
         {/* Cart Section */}
         <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-gray-200">
-          <button className="w-full flex items-center justify-center space-x-2 bg-orange-600 text-white py-3 rounded-lg hover:bg-orange-700 transition-colors">
+          <button className="w-full flex items-center justify-center space-x-2 bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors">
             <ShoppingCart size={20} />
             <span>Ver Carrinho (3)</span>
           </button>
