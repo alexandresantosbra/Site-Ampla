@@ -49,3 +49,15 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: #2563eb; /* azul mais claro no hover */
 }
+
+/* Prevent body scroll when sidebar is open */
+body.sidebar-open {
+  overflow: hidden;
+}
+
+/* Mobile sidebar animations */
+@media (max-width: 768px) {
+  .sidebar-overlay {
+    backdrop-filter: blur(2px);
+  }
+}

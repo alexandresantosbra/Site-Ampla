@@ -1,13 +1,21 @@
 import React from 'react';
-import { ShoppingCart, Phone, Mail, MapPin } from 'lucide-react';
+import { ShoppingCart, Phone, Mail, MapPin, Menu } from 'lucide-react';
+import MobileSidebar from './MobileSidebar';
 
 const Header: React.FC = () => {
+  const [isSidebarOpen, setIsSidebarOpen] = React.useState(false);
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
   return (
-    <header className="bg-white shadow-lg">
+    <>
+      <header className="bg-white shadow-lg">
       {/* Top bar with contact info */}
-      <div className="bg-blue-900 text-white py-2">
+        <div className="bg-blue-900 text-white py-2">
         <div className="container mx-auto px-4 flex justify-between items-center text-sm">
-          <div className="flex items-center space-x-4">
+            <div className="hidden sm:flex items-center space-x-4">
             <div className="flex items-center space-x-1">
               <Phone size={14} className="text-blue-400" />
               <span>(91) 980259828</span>
@@ -17,7 +25,10 @@ const Header: React.FC = () => {
               <span>marajocimentos@gmail.com</span>
             </div>
           </div>
-          <div className="flex items-center space-x-1">
+            <div className="sm:hidden text-center flex-1">
+              <span className="text-sm">ConstruMax - Materiais de Construção</span>
+            </div>
+            <div className="hidden sm:flex items-center space-x-1">
             <MapPin size={14} className="text-blue-400" />
             <span>São Paulo, SP</span>
           </div>
@@ -28,7 +39,16 @@ const Header: React.FC = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center"><img src="/logo.jpeg" alt="Logo" className="h-20 w-20 object-contain rounded-lg" /></div>
+            <div className="flex items-center">
+              {/* Mobile menu button */}
+              <button
+                onClick={toggleSidebar}
+                className="md:hidden p-2 mr-2 text-gray-700 hover:text-orange-600 transition-colors"
+              >
+                <Menu size={24} />
+              </button>
+              <img src="/logo.jpeg" alt="Logo" className="h-16 w-16 md:h-20 md:w-20 object-contain rounded-lg" />
+            </div>
 
           {/* Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
@@ -60,7 +80,11 @@ const Header: React.FC = () => {
           </div>
         </div>
       </div>
-    </header>
+      </header>
+
+      {/* Mobile Sidebar */}
+      <MobileSidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
+    </>
   );
 };
 
