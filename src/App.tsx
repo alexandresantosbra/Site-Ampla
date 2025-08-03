@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './components/Header';
 import ImageCarousel from './components/ImageCarousel';
+import ProductCatalog from './components/ProductCatalog';
 import ProductCategories from './components/ProductCategories';
 import FeaturedProducts from './components/FeaturedProducts';
 import Footer from './components/Footer';
@@ -12,6 +13,9 @@ function App() {
       <Header />
       <ImageCarousel />
       <FeaturedProducts />
+      <section id="catalogo">
+        <ProductCatalog />
+      </section>
       <ProductCategories />
       <Footer />
       <WhatsAppFloat />

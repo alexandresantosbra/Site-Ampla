@@ -21,6 +21,7 @@ const MobileSidebar: React.FC<MobileSidebarProps> = ({ isOpen, onClose }) => {
 
   const menuItems = [
     { icon: <Home size={20} />, label: 'Início', href: '#home' },
+    { icon: <Package size={20} />, label: 'Catálogo', href: '#catalogo' },
     { icon: <Package size={20} />, label: 'Produtos', href: '#produtos' },
     { icon: <Grid3X3 size={20} />, label: 'Categorias', href: '#categorias' },
     { icon: <Info size={20} />, label: 'Sobre', href: '#sobre' },
