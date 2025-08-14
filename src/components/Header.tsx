@@ -1,9 +1,11 @@
 import React from 'react';
 import { ShoppingCart, Phone, Mail, MapPin, Menu } from 'lucide-react';
 import MobileSidebar from './MobileSidebar';
+import Contact from './Contact';
 
 const Header: React.FC = () => {
   const [isSidebarOpen, setIsSidebarOpen] = React.useState(false);
+  const [isContactOpen, setIsContactOpen] = React.useState(false);
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
@@ -67,9 +69,12 @@ const Header: React.FC = () => {
             <a href="#sobre" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
               Sobre
             </a>
-            <a href="#contato" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+            <button 
+              onClick={() => setIsContactOpen(true)}
+              className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+            >
               Contato
-            </a>
+            </button>
           </nav>
 
           {/* Cart */}
@@ -87,6 +92,9 @@ const Header: React.FC = () => {
 
       {/* Mobile Sidebar */}
       <MobileSidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
+      
+      {/* Contact Modal */}
+      <Contact isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
     </>
   );
 };

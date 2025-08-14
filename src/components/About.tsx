@@ -1,7 +1,10 @@
 import React from 'react';
 import { Award, Users, Clock, MapPin, Phone, Mail, Target, Eye, Heart } from 'lucide-react';
+import Contact from './Contact';
 
 const About: React.FC = () => {
+  const [isContactOpen, setIsContactOpen] = React.useState(false);
+
   const stats = [
     { number: '20+', label: 'Anos de Experiência', icon: <Clock size={24} /> },
     { number: '50k+', label: 'Clientes Satisfeitos', icon: <Users size={24} /> },
@@ -62,10 +65,16 @@ const About: React.FC = () => {
               Há mais de 20 anos construindo sonhos e fornecendo materiais de qualidade para todo o Brasil
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+              <button 
+                onClick={() => setIsContactOpen(true)}
+                className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
+              >
                 Nossa História
               </button>
-              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors">
+              <button 
+                onClick={() => setIsContactOpen(true)}
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors"
+              >
                 Fale Conosco
               </button>
             </div>
@@ -280,12 +289,18 @@ const About: React.FC = () => {
               </div>
             </div>
 
-            <button className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+            <button 
+              onClick={() => setIsContactOpen(true)}
+              className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
+            >
               Fale Conosco Agora
             </button>
           </div>
         </div>
       </section>
+
+      {/* Contact Modal */}
+      <Contact isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
     </div>
   );
 };

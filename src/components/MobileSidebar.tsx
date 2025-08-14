@@ -1,5 +1,6 @@
 import React from 'react';
 import { X, Home, Package, Grid3X3, Info, Phone, ShoppingCart } from 'lucide-react';
+import Contact from './Contact';
 
 interface MobileSidebarProps {
   isOpen: boolean;
@@ -7,6 +8,8 @@ interface MobileSidebarProps {
 }
 
 const MobileSidebar: React.FC<MobileSidebarProps> = ({ isOpen, onClose }) => {
+  const [isContactOpen, setIsContactOpen] = React.useState(false);
+
   React.useEffect(() => {
     if (isOpen) {
       document.body.classList.add('sidebar-open');
@@ -25,10 +28,14 @@ const MobileSidebar: React.FC<MobileSidebarProps> = ({ isOpen, onClose }) => {
     { icon: <Package size={20} />, label: 'Produtos', href: '#produtos' },
     { icon: <Grid3X3 size={20} />, label: 'Categorias', href: '#categorias' },
     { icon: <Info size={20} />, label: 'Sobre', href: '#sobre' },
-    { icon: <Phone size={20} />, label: 'Contato', href: '#contato' },
   ];
 
   const handleLinkClick = () => {
+    onClose();
+  };
+
+  const handleContactClick = () => {
+    setIsContactOpen(true);
     onClose();
   };
 
@@ -82,6 +89,15 @@ const MobileSidebar: React.FC<MobileSidebarProps> = ({ isOpen, onClose }) => {
               <span className="font-medium">{item.label}</span>
             </a>
           ))}
+          
+          {/* Contact Button */}
+          <button
+            onClick={handleContactClick}
+            className="flex items-center space-x-3 px-6 py-4 text-gray-700 hover:bg-blue-50 hover:text-blue-600 hover:border-r-4 hover:border-blue-600 transition-all duration-200 w-full text-left"
+          >
+            <span className="text-gray-500"><Phone size={20} /></span>
+            <span className="font-medium">Contato</span>
+          </button>
         </nav>
 
         {/* Cart Section */}
@@ -101,6 +117,9 @@ const MobileSidebar: React.FC<MobileSidebarProps> = ({ isOpen, onClose }) => {
           </div>
         </div>
       </div>
+      
+      {/* Contact Modal */}
+      <Contact isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
     </>
   );
 };
