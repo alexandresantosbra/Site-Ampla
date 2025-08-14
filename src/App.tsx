@@ -4,6 +4,7 @@ import ImageCarousel from './components/ImageCarousel';
 import ProductCatalog from './components/ProductCatalog';
 import ProductCategories from './components/ProductCategories';
 import FeaturedProducts from './components/FeaturedProducts';
+import About from './components/About';
 import Footer from './components/Footer';
 import WhatsAppFloat from './components/WhatsAppFloat';
 
@@ -17,6 +18,9 @@ function App() {
         <ProductCatalog />
       </section>
       <ProductCategories />
+      <section id="sobre">
+        <About />
+      </section>
       <Footer />
       <WhatsAppFloat />
     </div>
