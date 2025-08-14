@@ -14,7 +14,11 @@ const Footer: React.FC = () => {
                  
               />
               <div>
+<<<<<<< HEAD
                 <h3 className="text-xl font-bold">Ampla distribuidora</h3>
+=======
+                <h3 className="text-xl font-bold">ConstruMax</h3>
+>>>>>>> 49a8f050ce753f49b9bd54fc68e77ca30a723933
                 <p className="text-sm text-gray-400">Materiais de Construção</p>
               </div>
             </div>
@@ -62,7 +66,11 @@ const Footer: React.FC = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Mail size={16} className="text-blue-400" />
+<<<<<<< HEAD
                 <span className="text-gray-400">contato@ampladistribuidora.com.br</span>
+=======
+                <span className="text-gray-400">contato@construmax.com.br</span>
+>>>>>>> 49a8f050ce753f49b9bd54fc68e77ca30a723933
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin size={16} className="text-blue-400" />

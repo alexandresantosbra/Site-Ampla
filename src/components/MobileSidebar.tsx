@@ -1,6 +1,9 @@
 import React from 'react';
 import { X, Home, Package, Grid3X3, Info, Phone, ShoppingCart } from 'lucide-react';
+<<<<<<< HEAD
 import Contact from './Contact';
+=======
+>>>>>>> 49a8f050ce753f49b9bd54fc68e77ca30a723933
 
 interface MobileSidebarProps {
   isOpen: boolean;
@@ -8,8 +11,11 @@ interface MobileSidebarProps {
 }
 
 const MobileSidebar: React.FC<MobileSidebarProps> = ({ isOpen, onClose }) => {
+<<<<<<< HEAD
   const [isContactOpen, setIsContactOpen] = React.useState(false);
 
+=======
+>>>>>>> 49a8f050ce753f49b9bd54fc68e77ca30a723933
   React.useEffect(() => {
     if (isOpen) {
       document.body.classList.add('sidebar-open');
@@ -28,17 +34,24 @@ const MobileSidebar: React.FC<MobileSidebarProps> = ({ isOpen, onClose }) => {
     { icon: <Package size={20} />, label: 'Produtos', href: '#produtos' },
     { icon: <Grid3X3 size={20} />, label: 'Categorias', href: '#categorias' },
     { icon: <Info size={20} />, label: 'Sobre', href: '#sobre' },
+<<<<<<< HEAD
+=======
+    { icon: <Phone size={20} />, label: 'Contato', href: '#contato' },
+>>>>>>> 49a8f050ce753f49b9bd54fc68e77ca30a723933
   ];
 
   const handleLinkClick = () => {
     onClose();
   };
 
+<<<<<<< HEAD
   const handleContactClick = () => {
     setIsContactOpen(true);
     onClose();
   };
 
+=======
+>>>>>>> 49a8f050ce753f49b9bd54fc68e77ca30a723933
   return (
     <>
       {/* Overlay */}
@@ -64,7 +77,11 @@ const MobileSidebar: React.FC<MobileSidebarProps> = ({ isOpen, onClose }) => {
               className="h-10 w-10 object-contain rounded-lg" 
             />
             <div>
+<<<<<<< HEAD
               <h3 className="font-bold text-gray-800">Ampla distribuidora</h3>
+=======
+              <h3 className="font-bold text-gray-800">ConstruMax</h3>
+>>>>>>> 49a8f050ce753f49b9bd54fc68e77ca30a723933
               <p className="text-xs text-gray-500">Materiais de Construção</p>
             </div>
           </div>
@@ -89,6 +106,7 @@ const MobileSidebar: React.FC<MobileSidebarProps> = ({ isOpen, onClose }) => {
               <span className="font-medium">{item.label}</span>
             </a>
           ))}
+<<<<<<< HEAD
           
           {/* Contact Button */}
           <button
@@ -98,6 +116,8 @@ const MobileSidebar: React.FC<MobileSidebarProps> = ({ isOpen, onClose }) => {
             <span className="text-gray-500"><Phone size={20} /></span>
             <span className="font-medium">Contato</span>
           </button>
+=======
+>>>>>>> 49a8f050ce753f49b9bd54fc68e77ca30a723933
         </nav>
 
         {/* Cart Section */}
@@ -117,9 +137,12 @@ const MobileSidebar: React.FC<MobileSidebarProps> = ({ isOpen, onClose }) => {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
       
       {/* Contact Modal */}
       <Contact isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
+=======
+>>>>>>> 49a8f050ce753f49b9bd54fc68e77ca30a723933
     </>
   );
 };

@@ -1,11 +1,17 @@
 import React from 'react';
 import { ShoppingCart, Phone, Mail, MapPin, Menu } from 'lucide-react';
 import MobileSidebar from './MobileSidebar';
+<<<<<<< HEAD
 import Contact from './Contact';
 
 const Header: React.FC = () => {
   const [isSidebarOpen, setIsSidebarOpen] = React.useState(false);
   const [isContactOpen, setIsContactOpen] = React.useState(false);
+=======
+
+const Header: React.FC = () => {
+  const [isSidebarOpen, setIsSidebarOpen] = React.useState(false);
+>>>>>>> 49a8f050ce753f49b9bd54fc68e77ca30a723933
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
@@ -28,7 +34,11 @@ const Header: React.FC = () => {
             </div>
           </div>
             <div className="sm:hidden text-center flex-1">
+<<<<<<< HEAD
               <span className="text-sm">Ampla distribuidora - Materiais de Construção</span>
+=======
+              <span className="text-sm">ConstruMax - Materiais de Construção</span>
+>>>>>>> 49a8f050ce753f49b9bd54fc68e77ca30a723933
             </div>
             <div className="hidden sm:flex items-center space-x-1">
             <MapPin size={14} className="text-blue-400" />
@@ -69,12 +79,18 @@ const Header: React.FC = () => {
             <a href="#sobre" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
               Sobre
             </a>
+<<<<<<< HEAD
             <button 
               onClick={() => setIsContactOpen(true)}
               className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
             >
               Contato
             </button>
+=======
+            <a href="#contato" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+              Contato
+            </a>
+>>>>>>> 49a8f050ce753f49b9bd54fc68e77ca30a723933
           </nav>
 
           {/* Cart */}
@@ -92,9 +108,12 @@ const Header: React.FC = () => {
 
       {/* Mobile Sidebar */}
       <MobileSidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
+<<<<<<< HEAD
       
       {/* Contact Modal */}
       <Contact isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
+=======
+>>>>>>> 49a8f050ce753f49b9bd54fc68e77ca30a723933
     </>
   );
 };
