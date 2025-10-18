@@ -54,26 +54,26 @@ const About: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-blue-900 to-blue-700 text-white py-20">
+      <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-24">
         <div className="absolute inset-0 bg-black bg-opacity-20"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fadeInUp">
               Sobre a ConstruMax
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100">
+            <p className="text-xl md:text-2xl mb-8 text-blue-100 animate-fadeInUp animation-delay-200">
               Há mais de 20 anos construindo sonhos e fornecendo materiais de qualidade para todo o Brasil
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button 
+            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fadeInUp animation-delay-400">
+              <button
                 onClick={() => setIsContactOpen(true)}
-                className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
+                className="bg-white text-blue-900 px-8 py-3 rounded-xl font-semibold hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 shadow-xl"
               >
                 Nossa História
               </button>
-              <button 
+              <button
                 onClick={() => setIsContactOpen(true)}
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors"
+                className="border-2 border-white text-white px-8 py-3 rounded-xl font-semibold hover:bg-white hover:text-blue-900 transition-all duration-300 transform hover:scale-105 shadow-xl"
               >
                 Fale Conosco
               </button>
@@ -87,11 +87,11 @@ const About: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="flex justify-center mb-4 text-blue-600">
+              <div key={index} className="text-center group">
+                <div className="flex justify-center mb-4 text-blue-600 transform group-hover:scale-110 transition-transform duration-300">
                   {stat.icon}
                 </div>
-                <div className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
+                <div className="text-3xl md:text-4xl font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors duration-300">
                   {stat.number}
                 </div>
                 <div className="text-gray-600 font-medium">
@@ -160,7 +160,7 @@ const About: React.FC = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-              <div className="bg-white p-8 rounded-xl shadow-lg text-center">
+              <div className="bg-white p-8 rounded-2xl shadow-lg text-center hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Target size={32} className="text-blue-600" />
                 </div>
@@ -171,8 +171,8 @@ const About: React.FC = () => {
                 </p>
               </div>
 
-              <div className="bg-white p-8 rounded-xl shadow-lg text-center">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="bg-white p-8 rounded-2xl shadow-lg text-center hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <Eye size={32} className="text-blue-600" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-800 mb-4">Visão</h3>
@@ -182,8 +182,8 @@ const About: React.FC = () => {
                 </p>
               </div>
 
-              <div className="bg-white p-8 rounded-xl shadow-lg text-center">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="bg-white p-8 rounded-2xl shadow-lg text-center hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <Heart size={32} className="text-blue-600" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-800 mb-4">Valores</h3>
@@ -196,7 +196,7 @@ const About: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {values.map((value, index) => (
-                <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                <div key={index} className="bg-white p-6 rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 hover:border-blue-200">
                   <div className="text-blue-600 mb-4">
                     {value.icon}
                   </div>
@@ -228,7 +228,7 @@ const About: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {team.map((member, index) => (
-                <div key={index} className="bg-gray-50 rounded-xl overflow-hidden hover:shadow-lg transition-shadow">
+                <div key={index} className="bg-white rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200">
                   <img
                     src={member.image}
                     alt={member.name}
@@ -289,9 +289,9 @@ const About: React.FC = () => {
               </div>
             </div>
 
-            <button 
+            <button
               onClick={() => setIsContactOpen(true)}
-              className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
+              className="bg-white text-blue-900 px-8 py-4 rounded-xl font-semibold hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 shadow-xl"
             >
               Fale Conosco Agora
             </button>

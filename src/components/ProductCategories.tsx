@@ -42,10 +42,13 @@ const ProductCategories: React.FC = () => {
   ];
 
   return (
-    <section id="categorias" className="py-16 bg-gray-50">
+    <section id="categorias" className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+        <div className="text-center mb-16">
+          <span className="inline-block px-4 py-2 bg-orange-100 text-orange-700 rounded-full text-sm font-semibold mb-4">
+            Explore
+          </span>
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
             Nossas Categorias
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -57,24 +60,30 @@ const ProductCategories: React.FC = () => {
           {categories.map((category, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group cursor-pointer"
+              className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 group cursor-pointer border border-gray-100 hover:border-blue-200"
             >
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative h-48 overflow-hidden bg-gradient-to-br from-blue-500 to-blue-700">
                 <img
                   src={category.image}
                   alt={category.name}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-90"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-20 transition-all duration-300"></div>
-                <div className="absolute top-4 left-4 text-white">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent group-hover:from-blue-900/50 transition-all duration-500"></div>
+                <div className="absolute top-4 left-4 text-white transform group-hover:scale-110 transition-transform duration-300">
                   {category.icon}
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">
+                <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors duration-300">
                   {category.name}
                 </h3>
-                <p className="text-gray-600">{category.description}</p>
+                <p className="text-gray-600 mb-4">{category.description}</p>
+                <div className="flex items-center text-blue-600 font-semibold text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span>Ver produtos</span>
+                  <svg className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
               </div>
             </div>
           ))}

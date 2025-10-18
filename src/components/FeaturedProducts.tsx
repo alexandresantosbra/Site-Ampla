@@ -42,10 +42,13 @@ const FeaturedProducts: React.FC = () => {
   ];
 
   return (
-    <section id="produtos" className="py-16 bg-white">
+    <section id="produtos" className="py-20 bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+        <div className="text-center mb-16">
+          <span className="inline-block px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold mb-4">
+            Ofertas Especiais
+          </span>
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
             Produtos em Destaque
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -57,22 +60,25 @@ const FeaturedProducts: React.FC = () => {
           {products.map((product) => (
             <div
               key={product.id}
-              className="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 group"
+              className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-2xl hover:border-blue-300 transition-all duration-300 transform hover:-translate-y-2 group"
             >
               <div className="relative">
                 {product.badge && (
-                  <span className="absolute top-2 left-2 bg-blue-600 text-white px-2 py-1 text-xs font-semibold rounded z-10">
+                  <span className="absolute top-3 left-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white px-3 py-1.5 text-xs font-bold rounded-full shadow-lg z-10 animate-fadeIn">
                     {product.badge}
                   </span>
                 )}
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                />
+                <div className="relative overflow-hidden">
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
               </div>
               
-              <div className="p-4">
+              <div className="p-5">
                 <h3 className="font-semibold text-gray-800 mb-2 line-clamp-2">
                   {product.name}
                 </h3>
@@ -101,9 +107,9 @@ const FeaturedProducts: React.FC = () => {
                   </div>
                 </div>
 
-                <button className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center space-x-2">
-                  <ShoppingCart size={16} />
-                  <span>Adicionar</span>
+                <button className="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white py-3 rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg flex items-center justify-center space-x-2 font-semibold">
+                  <ShoppingCart size={18} />
+                  <span>Adicionar ao Carrinho</span>
                 </button>
               </div>
             </div>

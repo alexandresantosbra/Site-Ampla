@@ -74,7 +74,7 @@ const ProductCatalog: React.FC = () => {
   };
 
   const ProductCard: React.FC<{ product: Product }> = ({ product }) => (
-    <div className={`bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 ${
+    <div className={`bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-2xl hover:border-blue-300 transition-all duration-300 transform hover:-translate-y-1 ${
       viewMode === 'list' ? 'flex' : ''
     }`}>
       <div className={`relative ${viewMode === 'list' ? 'w-48 flex-shrink-0' : ''}`}>
@@ -126,8 +126,8 @@ const ProductCatalog: React.FC = () => {
           </div>
         </div>
 
-        <button 
-          className={`w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center space-x-2 ${
+        <button
+          className={`w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white py-3 rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg flex items-center justify-center space-x-2 font-semibold ${
             !product.inStock ? 'opacity-50 cursor-not-allowed' : ''
           }`}
           disabled={!product.inStock}
@@ -140,11 +140,16 @@ const ProductCatalog: React.FC = () => {
   );
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Header */}
-      <div className="bg-white shadow-sm border-b">
+      <div className="bg-white shadow-md border-b">
         <div className="container mx-auto px-4 py-6">
-          <h1 className="text-3xl font-bold text-gray-800 mb-4">Catálogo de Produtos</h1>
+          <div className="mb-6">
+            <span className="inline-block px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold mb-3">
+              Explorar
+            </span>
+            <h1 className="text-3xl md:text-4xl font-bold text-gray-900">Catálogo de Produtos</h1>
+          </div>
           
           {/* Search and Controls */}
           <div className="flex flex-col lg:flex-row gap-4 items-center">
@@ -156,7 +161,7 @@ const ProductCatalog: React.FC = () => {
                 placeholder="Buscar produtos... (ex: cimento, tinta látex branca)"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300 shadow-sm focus:shadow-md"
               />
             </div>
 
@@ -164,7 +169,7 @@ const ProductCatalog: React.FC = () => {
             <div className="flex items-center space-x-4">
               <button
                 onClick={() => setShowFilters(!showFilters)}
-                className="flex items-center space-x-2 px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50"
+                className="flex items-center space-x-2 px-4 py-3 border border-gray-300 rounded-xl hover:bg-gray-50 hover:border-blue-400 transition-all duration-300 shadow-sm hover:shadow-md"
               >
                 <Filter size={16} />
                 <span>Filtros</span>
@@ -173,7 +178,7 @@ const ProductCatalog: React.FC = () => {
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-                className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                className="px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 transition-all duration-300 shadow-sm hover:shadow-md"
               >
                 <option value="name">Nome A-Z</option>
                 <option value="price-low">Menor Preço</option>
@@ -181,18 +186,18 @@ const ProductCatalog: React.FC = () => {
                 <option value="rating">Melhor Avaliado</option>
               </select>
 
-              <div className="flex border border-gray-300 rounded-lg overflow-hidden">
+              <div className="flex border border-gray-300 rounded-xl overflow-hidden shadow-sm">
                 <button
                   onClick={() => setViewMode('grid')}
-                  className={`p-2 ${viewMode === 'grid' ? 'bg-blue-600 text-white' : 'bg-white text-gray-600'}`}
+                  className={`p-3 transition-all duration-300 ${viewMode === 'grid' ? 'bg-blue-600 text-white' : 'bg-white text-gray-600 hover:bg-gray-50'}`}
                 >
-                  <Grid size={16} />
+                  <Grid size={18} />
                 </button>
                 <button
                   onClick={() => setViewMode('list')}
-                  className={`p-2 ${viewMode === 'list' ? 'bg-blue-600 text-white' : 'bg-white text-gray-600'}`}
+                  className={`p-3 transition-all duration-300 ${viewMode === 'list' ? 'bg-blue-600 text-white' : 'bg-white text-gray-600 hover:bg-gray-50'}`}
                 >
-                  <List size={16} />
+                  <List size={18} />
                 </button>
               </div>
             </div>
@@ -204,7 +209,7 @@ const ProductCatalog: React.FC = () => {
         <div className="flex gap-6">
           {/* Filters Sidebar */}
           {showFilters && (
-            <div className="w-80 bg-white rounded-lg shadow-sm p-6 h-fit">
+            <div className="w-80 bg-white rounded-2xl shadow-lg border border-gray-200 p-6 h-fit animate-fadeIn">
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-lg font-semibold">Filtros</h3>
                 <button
@@ -297,9 +302,9 @@ const ProductCatalog: React.FC = () => {
 
           {/* Products Grid */}
           <div className="flex-1">
-            <div className="mb-4 flex items-center justify-between">
-              <p className="text-gray-600">
-                {filteredProducts.length} produto{filteredProducts.length !== 1 ? 's' : ''} encontrado{filteredProducts.length !== 1 ? 's' : ''}
+            <div className="mb-6 flex items-center justify-between bg-blue-50 px-4 py-3 rounded-xl">
+              <p className="text-gray-800 font-semibold">
+                <span className="text-blue-600">{filteredProducts.length}</span> produto{filteredProducts.length !== 1 ? 's' : ''} encontrado{filteredProducts.length !== 1 ? 's' : ''}
               </p>
             </div>
 

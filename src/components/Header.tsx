@@ -13,7 +13,7 @@ const Header: React.FC = () => {
 
   return (
     <>
-      <header className="bg-white shadow-lg">
+      <header className="bg-white shadow-md sticky top-0 z-50 transition-shadow duration-300">
       {/* Top bar with contact info */}
         <div className="bg-blue-900 text-white py-2">
         <div className="container mx-auto px-4 flex justify-between items-center text-sm">
@@ -54,34 +54,40 @@ const Header: React.FC = () => {
 
           {/* Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#home" className="text-gray-700 hover:text-orange-600 font-medium transition-colors">
+            <a href="#home" className="relative text-gray-700 hover:text-blue-600 font-medium transition-colors group">
               Início
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <a href="#catalogo" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+            <a href="#catalogo" className="relative text-gray-700 hover:text-blue-600 font-medium transition-colors group">
               Catálogo
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <a href="#produtos" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+            <a href="#produtos" className="relative text-gray-700 hover:text-blue-600 font-medium transition-colors group">
               Produtos
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <a href="#categorias" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+            <a href="#categorias" className="relative text-gray-700 hover:text-blue-600 font-medium transition-colors group">
               Categorias
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <a href="#sobre" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+            <a href="#sobre" className="relative text-gray-700 hover:text-blue-600 font-medium transition-colors group">
               Sobre
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <button 
+            <button
               onClick={() => setIsContactOpen(true)}
-              className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+              className="relative text-gray-700 hover:text-blue-600 font-medium transition-colors group"
             >
               Contato
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
             </button>
           </nav>
 
           {/* Cart */}
           <div className="flex items-center space-x-4">
-            <button className="relative p-2 text-gray-700 hover:text-blue-600 transition-colors">
+            <button className="relative p-2 text-gray-700 hover:text-blue-600 transition-all duration-300 hover:scale-110">
               <ShoppingCart size={24} />
-              <span className="absolute -top-1 -right-1 bg-blue-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+              <span className="absolute -top-1 -right-1 bg-blue-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center animate-pulse">
                 3
               </span>
             </button>

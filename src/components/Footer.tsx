@@ -3,7 +3,7 @@ import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Twitter } from 'lucide
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-blue-900 text-white">
+    <footer className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
@@ -22,9 +22,15 @@ const Footer: React.FC = () => {
               Há mais de 20 anos fornecendo materiais de construção de qualidade para todo o Brasil.
             </p>
             <div className="flex space-x-4">
-              <Facebook size={20} className="text-gray-400 hover:text-blue-400 cursor-pointer transition-colors" />
-              <Instagram size={20} className="text-gray-400 hover:text-blue-400 cursor-pointer transition-colors" />
-              <Twitter size={20} className="text-gray-400 hover:text-blue-400 cursor-pointer transition-colors" />
+              <div className="w-10 h-10 bg-blue-800 rounded-full flex items-center justify-center hover:bg-blue-700 cursor-pointer transition-all duration-300 transform hover:scale-110">
+                <Facebook size={18} className="text-white" />
+              </div>
+              <div className="w-10 h-10 bg-blue-800 rounded-full flex items-center justify-center hover:bg-blue-700 cursor-pointer transition-all duration-300 transform hover:scale-110">
+                <Instagram size={18} className="text-white" />
+              </div>
+              <div className="w-10 h-10 bg-blue-800 rounded-full flex items-center justify-center hover:bg-blue-700 cursor-pointer transition-all duration-300 transform hover:scale-110">
+                <Twitter size={18} className="text-white" />
+              </div>
             </div>
           </div>
 
@@ -32,11 +38,11 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Links Rápidos</h4>
             <ul className="space-y-2">
-              <li><a href="#home" className="text-gray-400 hover:text-blue-400 transition-colors">Início</a></li>
-              <li><a href="#produtos" className="text-gray-400 hover:text-blue-400 transition-colors">Produtos</a></li>
-              <li><a href="#categorias" className="text-gray-400 hover:text-blue-400 transition-colors">Categorias</a></li>
-              <li><a href="#sobre" className="text-gray-400 hover:text-blue-400 transition-colors">Sobre Nós</a></li>
-              <li><a href="#contato" className="text-gray-400 hover:text-blue-400 transition-colors">Contato</a></li>
+              <li><a href="#home" className="text-gray-300 hover:text-white hover:translate-x-1 inline-block transition-all duration-300">Início</a></li>
+              <li><a href="#produtos" className="text-gray-300 hover:text-white hover:translate-x-1 inline-block transition-all duration-300">Produtos</a></li>
+              <li><a href="#categorias" className="text-gray-300 hover:text-white hover:translate-x-1 inline-block transition-all duration-300">Categorias</a></li>
+              <li><a href="#sobre" className="text-gray-300 hover:text-white hover:translate-x-1 inline-block transition-all duration-300">Sobre Nós</a></li>
+              <li><a href="#contato" className="text-gray-300 hover:text-white hover:translate-x-1 inline-block transition-all duration-300">Contato</a></li>
             </ul>
           </div>
 
@@ -44,11 +50,11 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Categorias</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">Ferramentas</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">Elétrica</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">Tintas</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">Hidráulica</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">Estrutural</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-white hover:translate-x-1 inline-block transition-all duration-300">Ferramentas</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-white hover:translate-x-1 inline-block transition-all duration-300">Elétrica</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-white hover:translate-x-1 inline-block transition-all duration-300">Tintas</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-white hover:translate-x-1 inline-block transition-all duration-300">Hidráulica</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-white hover:translate-x-1 inline-block transition-all duration-300">Estrutural</a></li>
             </ul>
           </div>
 
