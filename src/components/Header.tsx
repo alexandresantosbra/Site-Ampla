@@ -49,7 +49,7 @@ const Header: React.FC = () => {
               >
                 <Menu size={24} />
               </button>
-              <img src="/logo.svg" alt="Logo ConstruMax 2025" className="h-16 w-16 md:h-20 md:w-20 object-contain" />
+              <img src="/logo.jpeg" alt="Logo ConstruMax" className="h-16 w-16 md:h-20 md:w-20 object-cover rounded-xl shadow-lg ring-2 ring-blue-500/20 hover:ring-blue-500/40 transition-all duration-300 hover:scale-105" />
             </div>
 
           {/* Navigation */}

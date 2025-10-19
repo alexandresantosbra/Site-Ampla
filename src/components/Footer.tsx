@@ -10,9 +10,9 @@ const Footer: React.FC = () => {
           <div>
             <div className="flex items-center space-x-3 mb-4">
               <img
-                src="/logo.svg"
-                alt="Logo ConstruMax 2025"
-                className="h-16 w-16 object-contain"
+                src="/logo.jpeg"
+                alt="Logo ConstruMax"
+                className="h-16 w-16 object-cover rounded-xl shadow-xl ring-2 ring-blue-400/30"
               />
               <div>
                 <h3 className="text-xl font-bold">ConstruMax</h3>
