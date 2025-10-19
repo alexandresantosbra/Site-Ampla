@@ -8,10 +8,11 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <div>
-              <img 
-                src="/logo.jpeg" 
-                 
+            <div className="flex items-center space-x-3 mb-4">
+              <img
+                src="/logo.svg"
+                alt="Logo ConstruMax 2025"
+                className="h-16 w-16 object-contain"
               />
               <div>
                 <h3 className="text-xl font-bold">ConstruMax</h3>

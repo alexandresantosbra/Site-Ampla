@@ -1,0 +1,49 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient circle -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e40af;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f97316;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fb923c;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Main circle background -->
+  <circle cx="60" cy="60" r="58" fill="url(#bgGradient)"/>
+
+  <!-- Building/Construction icon -->
+  <!-- Foundation -->
+  <rect x="35" y="75" width="50" height="8" rx="2" fill="url(#accentGradient)"/>
+
+  <!-- Building structure -->
+  <path d="M40 70 L40 45 L50 35 L60 45 L60 70 Z" fill="white" opacity="0.9"/>
+  <path d="M60 70 L60 50 L80 50 L80 70 Z" fill="white" opacity="0.95"/>
+
+  <!-- Windows -->
+  <rect x="43" y="50" width="6" height="6" rx="1" fill="#1e40af"/>
+  <rect x="51" y="50" width="6" height="6" rx="1" fill="#1e40af"/>
+  <rect x="43" y="59" width="6" height="6" rx="1" fill="#1e40af"/>
+  <rect x="51" y="59" width="6" height="6" rx="1" fill="#1e40af"/>
+
+  <rect x="65" y="54" width="6" height="6" rx="1" fill="#1e40af"/>
+  <rect x="73" y="54" width="6" height="6" rx="1" fill="#1e40af"/>
+  <rect x="65" y="63" width="6" height="6" rx="1" fill="#1e40af"/>
+  <rect x="73" y="63" width="6" height="6" rx="1" fill="#1e40af"/>
+
+  <!-- Roof accent -->
+  <path d="M48 35 L60 45 L62 43 L50 33 Z" fill="url(#accentGradient)" opacity="0.8"/>
+
+  <!-- Modern geometric accent lines -->
+  <line x1="30" y1="30" x2="40" y2="40" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+  <line x1="85" y1="40" x2="95" y2="30" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+
+  <!-- Small circles accent -->
+  <circle cx="25" cy="55" r="3" fill="white" opacity="0.5"/>
+  <circle cx="95" cy="65" r="3" fill="white" opacity="0.5"/>
+
+  <!-- Bottom text area -->
+  <text x="60" y="100" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">2025</text>
+</svg>
