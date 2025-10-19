@@ -9,11 +9,13 @@ const Footer: React.FC = () => {
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-3 mb-4">
-              <img
-                src="/logo.jpeg"
-                alt="Logo ConstruMax"
-                className="h-16 w-16 object-cover rounded-xl shadow-xl ring-2 ring-blue-400/30"
-              />
+              <div className="bg-white p-2 rounded-xl shadow-lg">
+                <img
+                  src="/logo.jpeg"
+                  alt="Logo ConstruMax"
+                  className="h-14 w-14 object-contain"
+                />
+              </div>
               <div>
                 <h3 className="text-xl font-bold">ConstruMax</h3>
                 <p className="text-sm text-gray-400">Materiais de Construção</p>
