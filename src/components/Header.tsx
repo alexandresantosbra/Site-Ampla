@@ -49,8 +49,8 @@ const Header: React.FC = () => {
               >
                 <Menu size={24} />
               </button>
-              <div className="bg-white p-2 rounded-xl shadow-lg">
-                <img src="/logo.jpeg" alt="Logo ConstruMax" className="h-14 w-14 md:h-16 md:w-16 object-contain" />
+              <div className="bg-white p-3 rounded-xl shadow-lg">
+                <img src="/logo.jpeg" alt="Logo ConstruMax" className="h-16 w-16 md:h-24 md:w-24 object-contain" />
               </div>
             </div>
 
